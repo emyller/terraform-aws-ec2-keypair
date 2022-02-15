@@ -10,8 +10,8 @@ the Terraform state. Be careful.
 
 ```hcl
 module "ecs_instances_key_pair" {
-  source = "..."
-  version = "..."
+  source = "emyller/ec2-keypair/aws"
+  version = "~> 1.0"
   name = "ecs-production"
 }
 ```
