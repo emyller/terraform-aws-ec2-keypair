@@ -23,6 +23,9 @@ resource "aws_key_pair" "main" {
   */
   key_name = local.key_name
   public_key = tls_private_key.main.public_key_openssh
+  tags = {
+    Name = var.name
+  }
 }
 
 resource "time_static" "now" {
